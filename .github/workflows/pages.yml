@@ -5,6 +5,12 @@ on:
     branches:
       - master
 
+# Allow the deploy action to request an OIDC id-token.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
